@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+	int metros, rolos,resto;
+	printf("informe a quantidade de metros");
+	scanf("%d", &metros);
+	rolos = metros / 50;
+	resto = metros % 50;
+	printf("rolos %dn");
+    printf("metros %d",metros);
+    
+}
+	    
+
+
