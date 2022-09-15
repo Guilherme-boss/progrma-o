@@ -7,5 +7,14 @@ int main(){
 	    scanf("%lf",&notas[i]);
 		
 }
+
+
+\*
+
+\*
+
+1#includ<stdio.h>
+int man(){
+	printf("primeiro algorimo");
 	
 }
