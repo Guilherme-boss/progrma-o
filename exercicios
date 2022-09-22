@@ -58,3 +58,26 @@ int main(){
  	printf("O valor do cd e %.2lf\n", cd[i]);
  	printf("O valor do cd10 e %.2fl\n", cd10[i]);
  	printf("o valor do cdX e %.2fl\n", cdX[i]);
+	
+	
+	//faça um programa que leia 2 numeros e mostre qual e o maior
+	#include<stdio.h>
+int main(){
+	int valorA,valorB;
+	
+	printf("digite o primeiro numero: ");
+	scanf("%d",&valorA);
+	printf("digite o segundo numero");
+	scanf("%d",&valorB);
+	
+	if(valorA>valorB){
+		printf("%d",valorA);
+	}
+    else
+	{
+    printf("%d",valorB);
+	}
+	
+	
+	
+}
