@@ -104,8 +104,82 @@ int main(){
 		
 }
 
+QUESTÃO 1
+#include <stdio.h>
+
+//Construa um algoritmo que leia um número inteiro de horas e mostre ao usuário o correspondente em minutos e segundos destas horas.
+
+int main() {
+int minutos,segundos,horas;
+  
+printf("digite as horas\n");
+scanf("%i",&horas);
+minutos = horas * 60;
+printf("%i",minutos);
+segundos = minutos * 60;
+printf("%i",segundos);
+ 
+ ------------------------------------------------------------------------------------------------------------------
+QUESTÃO 2
+#include <stdio.h>
+
+//Construa um algoritmo que calcule a área de um círculo cujo raio é fornecido pelo usúario (use área 3.14 x raio2)
+
+int main (){
+float raio,pi= 3.14,area;
+
+printf("digite o raio = ");
+scanf("%f",&raio);
+
+area = pi * raio * raio;
+
+printf("area = %2.f\n",area);
+  
 
 
+  
+    return 0;
+  }
+
+
+--------------------------------------------------------------------------------------------------------------
+QUESTÃO 3
+
+#include <stdio.h>
+
+//Construa um algoritmo que calcule a média aritmética de 3 números quaisquer fornecidos pelo usuário.)
+
+int main (){
+float n1,n2,n3,media;
+printf("digite o numero\n");
+scanf("%f",&n1);
+printf("digite o numero\n");
+scanf("%f",&n2);
+printf("digite o numero\n");
+scanf("%f",&n3);
+
+media =  n1 + n2 + n3;
+
+printf("sua media final eh: %.1f\n",media);
+
+
+--------------------------------------------------------------------
+QUESTÃO 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------
+QUESTÃO 7
 #include <stdio.h>
 Escreva um programa que leia o nome do funcionário, o sexo (F ou M), o número de
 matrícula do funcionário, o número de horas trabalhadas, o valor que recebe por hora
