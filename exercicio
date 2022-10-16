@@ -101,8 +101,38 @@ int main(){
 		printf("numero digitado %d\nquadrado %d\nraiz %f\n",numero,quadrado,raiz);
 	}
 	
-	
-	
-	
-	
+		
 }
+
+
+
+#include <stdio.h>
+Escreva um programa que leia o nome do funcionário, o sexo (F ou M), o número de
+matrícula do funcionário, o número de horas trabalhadas, o valor que recebe por hora
+e calcule o salário desse funcionário. A seguir, mostre todos os dados na tela, os dados
+de entrada e os dados de saída.
+
+int main() {
+char nome[50],sexo[50];
+float matricula, horastrabalhadas,valorporhora,salario;
+printf("digite seu nome\n");
+scanf("%s", nome);
+printf("digite seu sexo");
+scanf("%s", sexo);
+    
+printf("Digite o numero da matricula\n");
+scanf("%f",&matricula);
+printf("Digite as horas trabalhadas\n");  scanf("%f",&horastrabalhadas);
+printf("Digite o valor que recebe por hora\n");
+scanf("%f",&valorporhora);
+
+salario = horastrabalhadas * valorporhora;
+
+printf("nome: %s \n",nome);
+printf("sexo: %s\n",nome);
+printf("matricula: %.2f",matricula);
+printf("horas trabalhadas: %.2f",horastrabalhadas);
+printf("valor que recebe por horas %.2f",valorporhora);
+printf("salario eh: %.2f",salario);
+
+
