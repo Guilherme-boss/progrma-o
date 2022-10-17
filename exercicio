@@ -165,6 +165,71 @@ printf("sua media final eh: %.1f\n",media);
 
 --------------------------------------------------------------------
 QUESTÃO 4
+#include <stdio.h>
+//Construa um algoritmo que a partir da leitura de dois números forneça o resto e o quociente da divisão do primeiro pelo segundo número.
+int main() {
+int valorA,valorB,restodadivisao,valordadivisao;
+printf("Digite o valor a:\n");
+scanf("%i",&valorA);
+
+printf("digite o valor b:\n");
+scanf("%i",valorB);
+
+restodadivisao = valorA % valorB;
+valordadivisao = valorA % valorB;
+
+printf("o resto da divisao eh:%.1i\n",restodadivisao);
+printf("o valor da divisao eh:%.1i\n",valordadivisao);
+  
+return 0;
+}
+----------------------------------------------------------
+QUESTÃO 5
+#include <stdio.h>
+//Fazer um algoritmo para auxiliar um construtor a descobrir a quantidade de rolos e a de metros avulsos de fios que ele precisa adquirir. Sabe-se que o construtor tem a quantidade total de fios em metros a serem utilizados na instalação eletrica da obra e que cada rolo de fio tem 50 metros.
+
+int main() {
+int metros,rolos,metrosavulsos;
+printf("Digite a quantidade de metros:");
+scanf("%i",&metros);
+
+rolos = metros / 50;
+metrosavulsos = metros % 50;
+
+printf("rolos eh:%i\n",rolos);
+printf("metros avulsos eh:%i",metrosavulsos);
+
+  
+
+
+
+return 0;
+}
+------------------------------------------------------------------------------
+QUESTÃO 6
+#include <stdio.h>
+//Leia 2 valores A e B, que correspondem a 2 notas de um aluno. A seguir, calcule a
+//média do aluno, sabendo que a nota A tem peso 3.5 e a nota B tem peso 7.5 (A soma
+//dos pesos portanto é 11). Assuma que cada nota pode ir de 0 até 10.0.
+
+int main() {
+float notaA,notaB,media,aprovado,reprovado;
+
+  
+printf("a notaA: \n");
+scanf("%f",&notaA);
+printf("a notaB: \n");
+scanf("%f",&notaB);
+
+media = (3.5*notaA+7.5*notaB)/11;
+
+
+
+printf("media:%.2f\n",media);
+
+
+return 0;
+}
 
 
 
