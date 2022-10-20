@@ -340,3 +340,46 @@ printf("o valor do seno eh:%2f\n",valordoseno);
 
 return  0;
 }
+
+--------------------------------------------------------------------------  ---------------------------------
+#include<stdio.h>
+#include<math.h>
+//usuário deseja verificar se seu ano de nascimento é um ano bissexto ou não. Para tal, é
+//preciso solicitar o nome do usuário e ano de nascimento, garantindo que seja um ano válido, ou seja, entre
+//1900 e 2022.
+//OBS. Para saber se um ano é bissexto, devemos verificar se ele se encaixa em um dos casos:
+//Caso 1) É um número divisível por 4, mas não é divisível por 100.
+//Caso 2) É um número divisível por 4, por 100 e por 400
+int main(){
+int anodenascimento,resto4,resto100,resto400;
+char nome[100];
+printf("digite seu nome por favor:\n");
+scanf("%s",&nome);
+printf("digite o ano do seu nascimento para saber se e bissexto:\n");
+scanf("%i",&anodenascimento);
+
+resto4 = anodenascimento % 4;
+resto100 = anodenascimento % 100;
+resto400= anodenascimento % 400;
+
+if(resto4 ==0 && resto100 ==0){
+	printf("%s,eh um ano bissexeto!!!\n",nome);
+}
+else if (resto4==00&& resto100==0){
+	if(resto400==0){
+		printf("%s,eh um ano bissexto!!!\n",nome);
+	}
+}
+else{
+	printf("%s,nao e um ano bissexto!!!\n",nome);
+}
+
+
+return  0;
+}
+
+
+
+
+
+
