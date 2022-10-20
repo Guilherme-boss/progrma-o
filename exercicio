@@ -274,4 +274,45 @@ printf("horas trabalhadas: %.2f",horastrabalhadas);
 printf("valor que recebe por horas %.2f",valorporhora);
 printf("salario eh: %.2f",salario);
 
+---------------------------------------------------------------------------------
 
+#include<stdio.h>
+#include<math.h>
+//Escreva um printf com as seguintes informações: nome da disciplina (Algoritmo e
+//Programação), nome do professor (Joyce Siqueira), nome completo do aluno, matrícula, curso, link do
+//repositório do GitHub e qual software foi utilizado: DevC++ 
+int main(){
+
+printf("algoritimo e programacao\n joyce siqueira \n guilherme ferreira silva/n ads\nhttps://github.com/Guilherme-boss, DevC++ ");
+
+------------------------------------------------------------------------------------------------------------------------------------------
+//Deve ser construído um menu, com switch case, que dê acesso as 3 questões. Ou seja,
+//para executar a questão A, digite ‘A’; para questão B, digite ‘B’ e; para a questão C, digite ‘C’. Caso a
+//opção desejada não seja válida, imprimir “Opcao invalida”
+
+int valor;
+printf("escolha um numero de 1 a 3 para escolher a questao\n");
+scanf(%i,&valor);
+
+switch (valor){
+case 1:
+printf("questao1\n");
+break;
+
+case 2:
+printf("questao 2\n");
+break;
+	
+case 3:
+printf("questao 3\n");
+break;
+default:
+printf("opcao invalida!\n");
+}
+
+
+
+
+
+return  0;
+}
