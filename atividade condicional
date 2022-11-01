@@ -1,8 +1,6 @@
 //Faça um programa que leia dois números e mostre qual deles é o maior.
 #include <stdio.h>
 #include <math.h>
-
-//Faça um programa que leia dois números e mostre qual deles é o maior.
 int main(){
 	int n1,n2,n3;
 	printf("Digite o primeiro numero\n");
@@ -34,25 +32,85 @@ printf("o maior numero eh:%1.i\n");
 números forem iguais, imprima a mensagem “Números iguais”
 #include <stdio.h>
 #include <math.h>
+
+
+int main(int argc, char *argv[]) {
+	int n1,n2;
+	printf("Digite o primeiro nuemero\n");
+	scanf("%i",&n1);
+	printf("digite o segundo numero\n");
+	scanf("%i",&n2);
+	
+	if (n1>n2){
+	printf("o maior numero eh:%i\n",n1);
+	}
+	else if(n2>n1){
+	printf("o maio numero eh:%i\n",n2);
+	}
+	else if  (n1== n2){
+	printf("numeros sao iguais ");
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------
 //Faça um programa que leia um número inteiro e verifique se esse número é par ou ímpar.
 int main(){
-	int numero;
-	printf("informe um valor\n");
-	scanf("%i",&numero);
+int main(int argc, char *argv[]) {
+	int n1,n2;
+	printf("Digite o nuemero\n");
+	scanf("%i",&n1);
+	printf("digite o numero\n");
+	scanf("%i",&n2);
 	
-	if (numero% 2== 0){
-		printf("o numero digitado e par\n");
+	if (n1>n2){
+	printf("o numero par eh:%i\n",n1);
 	}
-   else {
-     printf("O numero digitado e impar\n");
+	else{
+	printf("o numero eh impar!%i\n",n2);
+		
 	}
-  
+	return 0;
+}	
+	
+	
+	
+	
   
   -------------------------------------------------------------
   //faça um programa que leia o salário de um trabalhador e o valor da prestação de um
  // empréstimo. Se a prestação, for maior que 20% do salário, imprima: “Empréstimo não
   //concedido.”, caso contrário, imprima: “Empréstimo concedido.”
-  
+  int main(int argc, char *argv[]) {
+	int salario,prestacao,porcentagemp;
+	
+	printf("digite o salario\n");
+	scanf("%i",&salario);
+	printf("digite a prestacao do emprestimo\n");
+	scanf("%i",&prestacao);
+	
+	porcentagemp = ( prestacao*100/salario);
+	
+	if(porcentagemp<=20){
+	printf("emprestimo consedido!!!\n");
+	}
+	else {
+		printf("emprestimo nao consedido\n");
+	}
+	
+
 
 
 
