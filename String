@@ -1,0 +1,41 @@
+//Elabore um algoritmo que receba o nome completo de um cliente e imprima a quantidade de
+caracteres digitados.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Elabora um algoritmo que valide o nome de um cor, ou seja, o usuário poderá digitar apenas
+branco, verde e amarelo
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+char cor[50];
+ printf("Digite a cor:\n");
+ scanf("%s",&cor);
+
+if(strcmp(cor,"branco")==0){
+	printf("branco");
+}	
+else if(strcmp(cor,"verde")==0){
+	printf("verde");
+}
+else if (strcmp(cor,"amarelo")==0){
+	printf("amarelo");
+}	
+else printf("cor invalida");	
+	
+	
+}
