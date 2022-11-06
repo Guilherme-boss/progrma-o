@@ -1,0 +1,306 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+#define QUANTIDADE_USUARIO 1000
+#define QUANTIDADE_USUARIO_BACKUP 1000
+#define TAMANHO_EMAIL 1000;
+#define TAMANHO_EMAIL_BACKUP 1000;
+
+typedef struct usuarios{
+		
+		int ID, posicaostruct;
+		char nome[50],email[50],sexo[50],endereco[50];
+		double altura;
+	
+}pessoa_t;
+	
+typedef struct lista
+{
+	
+	pessoa_t ps [QUANTIDADE_USUARIO];
+	
+}LISTA;
+
+
+
+typedef struct usuariosba{
+		
+		int IDb, posicaostructb;
+		char nomeb[50],emailb[50],sexob[50],enderecob[50];
+		double alturab;
+	
+}pessoa_tb;
+	
+typedef struct listaba
+{
+	
+	pessoa_tb PS [QUANTIDADE_USUARIO_BACKUP];
+	
+}LISTAba;
+
+
+
+
+void consultarDados(char *chave, LISTA *pCons){
+	
+		int t;
+		
+		for (t = 0; t < QUANTIDADE_USUARIO; t++ ){
+			
+			if(!strcmp(chave, pCons->ps[t].email)){
+				
+				printf("----------Usuario---------- \n");
+				printf("ID do usuário: %i \n",pCons->ps[t].ID);
+				printf("Nome: %s \n",pCons->ps[t].nome);	
+				printf("Email: %s \n",pCons->ps[t].email);	
+				printf("Sexo: %s \n",pCons->ps[t].sexo);
+				printf("Endereço: %s \n",pCons->ps[t].endereco);
+				printf("Posicao da struct: %i \n",pCons->ps[t].posicaostruct);	
+				printf("----------Usuario---------- \n");
+				
+				
+			}	
+			
+		}
+		
+	
+	
+}
+
+void backup(){
+	
+	LISTAba listaba;
+	
+	
+		
+	for(int ba = 1; ba <= 1000; ba++){
+				
+				
+	   	listaba.PS[ba].IDb = (lista.ps[ba].ID);
+
+		listaba.PS[ba].nomeb= lista.ps[ba].nome;
+		listaba.PS[ba].sexob= lista.ps[ba].sexo;
+		listaba.PS[ba].enderecob= lista.ps[ba].endereco;
+		listaba.PS[ba].IDb	= lista.ps[ba].ID;
+		listaba.PS[ba].posicaostructb	= lista.ps[ba].posicaostruct;
+				
+		qtdb = qtdb + 1;
+		
+			
+}
+		printf("Backup feito com sucesso!!! Veja abaixo os dados salvos: \n");
+			
+		for(int BA = 1;BA <= qtdb;BA++){
+				
+			printf("----------Usuarios Salvos no Backup---------- \n");
+			printf("ID do usuário: %i \n",listaba.PS[BA].IDb);
+			printf("Nome: %s \n",listaba.PS[BA].nomeb);	
+			printf("Email: %s \n", listaba.PS[BA].emailb);	
+			printf("Sexo: %s \n",listaba.PS[BA].sexob);
+			printf("Endereço: %s \n",listaba.PS[BA].enderecob);	
+			printf("----------Usuarios Salvos no Backup---------- \n");
+	
+			}
+	
+	
+	
+	
+}
+
+void consultarDados(char chave, LISTA *pCons);
+
+void backup();
+int main(int argc, char *argv[]){
+	bool existe( char palavra[], char frase[]);
+	void consultarDados(char *chave, LISTA *pCons);
+
+	setlocale(LC_ALL, "Portuguese");
+	
+	LISTA lista;
+	
+	LISTAba listaba;
+	
+	int codigo,i,qtdu = 0,qtdb = 0 ;
+	char letra [] = "@";
+	
+	
+	for(i = 1; i <=1000;i++){
+	
+	printf("Seja bem vindo ao sistema de cadastro de usuários de trabalho \n");
+	printf("1 - Para cadastrar um usuário \n");
+	printf("2 - Para editar um usuário \n");
+	printf("3 - Para excluir um um usuário \n");
+	printf("4 - Bucar usuários por email \n");
+	printf("5 - Imprimir todos os usuários \n");
+	printf("6 - Fazer Backup de todos os usuário \n");
+	printf("7 - Fazer restauração dos dados dos usuários \n");
+	printf("0 - Para sair \n");
+	scanf("%i",& codigo);
+
+  if(codigo == 0){
+
+    break;
+    
+  }
+  
+	switch(codigo){
+		
+		case 1:
+			//strchr e strcmp
+			printf("Digite seu email: \n");
+			scanf("%s", lista.ps[i].email);		
+					
+			printf("email, válido \n");
+					
+			printf("Digite o nome: \n");
+			scanf("%s", lista.ps[i].nome);
+						
+			printf("Digite o sexo: \n");
+			scanf("%s", lista.ps[i].sexo);
+				
+			printf("Digite o endereco: no formato linha, exemplo: ruaexemplo,numeroexemplo,bairroexmeplo,cidadeexemplo. \n");
+			scanf("%s",lista.ps[i].endereco);
+											
+					
+			lista.ps[i].ID = (rand() % 1000000);
+					
+			lista.ps[i].posicaostruct = i; 	
+				
+			qtdu = qtdu + 1;
+				
+							
+		break;
+				
+		case 2:
+			
+			int c;
+			char emaileditar[70];
+		 
+		    printf("Então você deseja consultar um usuário certo ? Para isso , digite o email do mesmo: \n");
+		    scanf("%s", emaileditar);
+		    
+			consultarDados(emaileditar, &lista);
+			printf(" Para alterar os dados, basta digitar a posição da struct e após isso ir escrevendo os campos como se fosse cadastrar um usuário novo, digitando tudo igual e mudando apenas o que deseja, digite a posição: \n " );
+			scanf("%i", & c);
+			
+			printf("Digite seu email: \n");
+			scanf("%s", lista.ps[c].email);		
+					
+			printf("email, válido \n");
+					
+			printf("Digite o nome: \n");
+			scanf("%s", lista.ps[c].nome);
+						
+			printf("Digite o sexo: \n");
+			scanf("%s", lista.ps[c].sexo);
+				
+			printf("Digite o endereco: no formato linha, exemplo: ruaexemplo,numeroexemplo,bairroexmeplo,cidadeexemplo. \n");
+			scanf("%s",lista.ps[c].endereco);
+			
+			
+		break;
+		
+		case 3:
+			
+			int cod;
+			char emaildeconsulta[70];
+		 
+		    printf("Entáo você deseja excluir um usuário certo ? Para isso , digite o email do mesmo: \n");
+		    scanf("%s", emaildeconsulta);
+		    
+			consultarDados(emaildeconsulta, &lista);
+			
+			printf("Esse é o usuário que deseja deletar ?\n");
+			printf("1 - Sim, desejo deletar esse usuário\n 2 - Não, não é esse o usuário que desejo deletar \n");
+			scanf("%i", & cod);
+			
+			if(cod == 1){
+					
+				
+		
+				printf("Usuário deletado com sucesso!!! \n");
+				
+				
+				
+			}	
+			if(cod == 2){
+				
+				printf(" Já que esse não é o usuário que deseja deletar, verifique se digitou corretamente o email do usuário! \n");
+				
+			}
+					
+			break;
+				
+		case 4:
+			
+			char emaildeexcluir[70];
+		 
+		    printf("Entáo você deseja consultar um usuário certo ? Para isso , digite o email do mesmo: \n");
+		    scanf("%s", emaildeexcluir);
+		    
+			consultarDados(emaildeexcluir, &lista);
+			
+			
+			
+			
+		break;
+		
+		case 5:
+			
+			for(int z = 1;z <= qtdu;z++){
+				
+				printf("----------Usuario---------- \n");
+				printf("ID do usuário: %i \n",lista.ps[z].ID);
+				printf("Nome: %s \n",lista.ps[z].nome);	
+				printf("Email: %s \n", lista.ps[z].email);	
+				printf("Sexo: %s \n",lista.ps[z].sexo);
+				printf("Endereço: %s \n",lista.ps[z].endereco);	
+				printf("----------Usuario---------- \n");
+			}
+			
+		break;
+		
+		case 6:
+			
+			
+			void backup();
+			
+		break;
+		
+		case 7:
+			
+			
+			int qtdb = 0 ;
+			for(int i = 1; i <= 1000; i++){
+				
+				
+				listaba.PS[i].IDb = lista.ps[i].ID;
+
+				 lista.ps[i].nome=listaba.PS[i].nomeb;
+				 lista.ps[i].sexo=listaba.PS[i].sexob;
+				 lista.ps[i].endereco=listaba.PS[i].enderecob;
+   	   	   	   	 lista.ps[i].ID=listaba.PS[i].IDb;
+                 lista.ps[i].posicaostruct = listaba.PS[i].posicaostructb;
+				
+				qtdb = qtdb + 1;
+			
+			}
+			
+			printf("Restauração feita com sucesso feito com sucesso!!! \n");
+			
+		break;
+		
+		default:
+			
+			printf("Digite uma opção válida \n");
+			
+		break;
+		
+	
+		}
+		
+	}
+	return 0;
+}
