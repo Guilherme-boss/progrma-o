@@ -110,8 +110,94 @@ int main(int argc, char *argv[]) {
 		printf("emprestimo nao consedido\n");
 	}
 	
+--------------------------------------------------------------------------------------------------------
+//Faça um programa que receba a altura e o sexo de uma pessoa e calcule e mostre seu
+peso ideal, utilizando as seguintes fórmulas (em que “h” corresponde à altura):
+◦ Homens: (72,7 * h) – 58
+◦ Mulheres: (62,1 * h) – 44,7
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Leia 4 valores inteiros A, B, C e D. A seguir, se B for maior do que C e se D for maior
+do que A, e a soma de C com D for maior que a soma de A e B e se C e D, ambos, forem
+positivos e se a variável A for par escrever a mensagem "Valores aceitos", senão
+escrever "Valores nao aceitos"
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	
+	int A,B,C,D,somacd,somaab,restoa;
+	
+	printf("Digite o valor de A: \n");
+	scanf("%i",& A);
+	printf("Digite o valor de B: \n");
+	scanf("%i", & B);
+	printf("Digite o valor de C: \n");
+	scanf("%i", & C);
+	printf("Digite o valor de D: \n");
+	scanf("%i", & D);
+	
+	if(B>C){
+		
+		if(D>A){
+			
+			somacd = C + D;
+			somaab = A + B;
+			
+			if(somacd > somaab){
+				
+				if( C > 0 && D > 0){
+					
+					restoa = A%2;
+					
+					if(restoa == 0){
+						
+						
+						printf("Valores aceitos \n");
+						
+						
+					}
+					
+					
+					
+				}
+				
+				
+			}
+			
+			
+		}
+		
+	
+	}
+	else{
+		
+		
+		printf("Valores não aceitos \n");
+		
+	}
+	
+	
+		
+	return 0;
+}
+---------------------------------------------------------------------------------------
 
 
 
