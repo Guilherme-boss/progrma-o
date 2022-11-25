@@ -1,1 +1,85 @@
+1. O seu primeiro programa em qualquer linguagem de programação normalmente é
+o "Hello World!". Neste primeiro problema tudo o que você precisa fazer é imprimir
+esta mensagem na tela.
 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	printf("Hello World");
+	return 0;
+}
+
+------------------------------------------------------------------------------------------------------
+2. Faça um algoritmo que imprima o poema abaixo, com a mesma formatação:
+Caderno de poesias é um belo lugar.
+Tantas coisas lindas que eu gostaria de falar.
+Eu falo em forma de versos para todos poderem escutar.
+Agora você já sabe por que os poetas passam os dias escrevendo em seus
+cadernos de poesias
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+printf("Caderno de poesias é um belo lugar.\n");
+printf("Tantas coisas lindas que eu gostaria de falar.\n");
+printf("Eu falo em forma de versos para todos poderem escutar.\n");
+printf("Agora voce ja sabe por que os poetas passam os dias escrevendo em seus\n caderno de poesias");
+	return 0;
+}
+
+-------------------------------------------------------------------------------------------------------------------
+3. Faça um algoritmo que leia um numero inteiro, dois números reais (um float e um
+double), um caracter (uma única letra), uma string (conjunto de caracteres) e um
+booleano. Na sequência, imprima todos com a formatação abaixo.
+Numero inteiro: “valor”
+Numeros reais:
+“valor”
+“valor”
+Letra: “valor”
+String: “valor”
+Logico: “valor
+
+
+#include <stdio.h>
+intprincipal(){
+    int inteiro;
+    numeroflutuaçãoflutuante;
+    numeroduplo duplo;
+    char letra;
+    char palavra[5];
+
+    printf("Digite o numero inteiro: ");
+    scanf("%i",&inteiro);
+    printf("Digite 2 numeros reais: ");
+    scanf("%f%lf",&numerofloat,&numerodouble);
+    fflush(stdin);
+    printf("Escreva uma letra: ");
+    scanf("%c",&letra);
+    fflush(stdin);
+    printf("Escreva uma palavra: ");
+    fgets(palavra,5,stdin);
+
+    printf("Numero inteiro:%i\n Numero Reais:%f,%lf\n Letra:%c\nString:%s",inteiro,numerofloat,numerodouble,letra,palavra);
+    
+    
+  -----------------------------------------------------------------------------------------------------------------------------
+  
+  4. Leia 2 valores inteiros e armazene-os nas variáveis A e B. Efetue a soma
+de A e B atribuindo o seu resultado na variável X. Imprima o resultado da seguinte
+forma “valor de A” + “valor de B” = “valor de X”.
+
+int main() {
+int valorA,valorB,resultado;
+
+printf("Digite o valor a :\n");
+scanf("%i",&valorA);
+printf("Digite o valor b:\n");
+scanf("%i",&valorB);
+
+resultado = valorA + valorB;
+
+printf("o resultado eh:%i\n",resultado);
+	return 0;
+}
