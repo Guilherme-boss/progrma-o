@@ -83,3 +83,137 @@ resultado = valorA + valorB;
 printf("o resultado eh:%i\n",resultado);
 	return 0;
 }
+
+
+-------------------------------------------------------------------------------------------------------
+5. Faça o mesmo exercício, porém, realizando o calculo dentro do printf
+int main() {
+int valorA,valorB,resultado;
+
+printf("Digite o valor a :\n");
+scanf("%i",&valorA);
+printf("Digite o valor b:\n");
+scanf("%i",&valorB);
+
+resultado = valorA + valorB;
+
+printf("o resultado eh:%i\n",valorA + valorB);
+	
+--------------------------------------------------------------------------------------------------------------
+6. Faça o mesmo exercício, atribuindo valor às variávies A e B (não é necessário
+solicitar ao usuário, os valores serão atribuídos no próprio código
+
+#include <stdio.h>
+intprincipal(){
+    inta=2,b=2,x;
+
+    printf("%i+%i=%i",a,b,x=a+b)
+------------------------------------------------------------------------------------------------------------------------
+
+7. Leia dois valores inteiros. A seguir, calcule o produto entre estes dois valores e
+atribua esta operação à variável PROD. A seguir mostre a variável PROD com
+mensagem: PROD = “valor de PROD”.
+int main() {
+int valorA,valorB,prod;
+
+printf("Digite o valor a :\n");
+scanf("%i",&valorA);
+printf("Digite o valor b:\n");
+scanf("%i",&valorB);
+
+prod = valorA + valorB;
+
+printf("o valor de prod eh:%i",prod);
+-----------------------------------------------------------------------------------------------------
+8. Leia quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a diferença do
+produto de A e B pelo produto de C e D segundo a fórmula: DIFERENCA = (A * B -
+C * D). Apresente o resultado da seguinte forma:
+DIFERENCA = (“valor de A” * “valor de B” - ““valor de C” * ““valor de D”)
+DIFERENCA = “vaor de DIFERENCA
+
+#include <stdio.h>
+intprincipal(){
+    int a,b,c,d,diferenca;
+
+    printf("Digite os valores: ");
+    scanf("%i%i%i%i",&a,&b,&c,&d);
+
+    printf("Diferenca =%i*%i-%i*%i\n",a,b,c,d);
+    printf("Diferenca:%i",diferenca=(a*b)-(c*d));
+}
+
+--------------------------------------------------------------------------------
+
+9.9. Faça um programa que leia o nome de um vendedor, o seu salário fixo e o total de
+vendas efetuadas por ele no mês (em dinheiro). Sabendo que este vendedor ganha
+15% de comissão sobre suas vendas efetuadas, informar o total a receber no final
+do mês, com duas casas decimais
+#include <stdio.h>
+intprincipal(){
+    char nome[15];
+    salario flutuante, final;
+    int vendas;
+
+    printf("Digite o nome do vendedor: ");
+    fgets(nome,15,stdin);
+    printf("Digite o seu salario fixo: ");
+    scanf("%f",&salario);
+    printf("Digite o total de vendas efetuadas por %s",nome);
+    scanf("%i",&vendas);
+
+    printf("%sdevera receber no final do mes:%.2f",nome,final=salario+(vendas*0.15));
+-------------------------------------------------------------------------------------------------
+10 . Leia os quatro valores correspondentes aos eixos x e y de dois pontos quaisquer
+no plano, p1(x1,y1) e p2(x2,y2) e calcule a distância entre eles, mostrando 4 casas
+decimais após a vírgula, segundo a fórmula.
+
+#include <stdio.h>
+#include <math.h>
+intprincipal(){
+    flutuardistância;
+    inti,x[2],y[2];
+
+    for(i=0;i<2;i++){
+        printf("Digite o valor de X%i",i+1);
+        scanf("%i",&x[i]);
+        printf("Digite o valor de Y%i",i+1);
+        scanf("%i",&y[i]);
+    }
+       distancia =sqrt(pow(x[1]-x[0],2)+pow(y[1]-y[0],2));
+    printf(" distancia eh de:%.2f",distancia);
+
+}
+
+11. Faça um programa que calcule e mostre a área da superfície e o volume de uma
+esfera sendo fornecido o valor de seu raio (R). A fórmula para calcular o volume é:
+(4/3) * pi * R³. A fórmula para calcular a área é: 4 * pi * R². Considere (atribua)
+para pi o valor 3.14159. Use o conceito de constante Dica: Ao utilizar a fórmula,
+procure usar (4/3.0) ou (4.0/3), pois algumas linguagens (dentre elas o C++),
+assumem que o resultado da divisão entre dois inteiros é outro inteiro.
+-----------------------------------------------------------------------------------------------
+
+11. Faça um programa que calcule e mostre a área da superfície e o volume de uma
+esfera sendo fornecido o valor de seu raio (R). A fórmula para calcular o volume é:
+(4/3) * pi * R³. A fórmula para calcular a área é: 4 * pi * R². Considere (atribua)
+para pi o valor 3.14159. Use o conceito de constante Dica: Ao utilizar a fórmula,
+procure usar (4/3.0) ou (4.0/3), pois algumas linguagens (dentre elas o C++),
+assumem que o resultado da divisão entre dois inteiros é outro inteiro.
+
+#include <stdio.h>
+#include <math.h>
+intprincipal(){
+    flutuadorpi=3,14159,raio;
+    volume duplo, área;
+
+    printf("Digite o valor do raio: ");
+    scanf("%f",&raio);
+
+volume = (4.0/3)*pi*(pow(raio,3));
+área =4*pi*(pow(raio,2));
+
+    printf("Volume:%.2lf\nÁrea:%.2lf",volume,área);
+
+
+}
+return 0;
+
