@@ -384,42 +384,355 @@ int main(){
 seguintes médias de acordo com um valor numérico digitado pelo usuário e mostrado na
 tabela a seguir:
 
+#include <iostream>
+#include <stdlib.h>
+#include <locale.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
+int main(int argc, char** argv) {
+	
+	setlocale(LC_ALL,"Portuguese");
+	
+	int codigo;
+	float  x, y , z , G, P, H, A;
+	
+	
+	printf("Olá, seja bem vindo ao cáculo de médias, escolha uma opção de média para realizar o cáculo \n");
+	printf("1 - Geométrica \n 2 - Ponderada \n 3 -  Harmônica \n 4 - Aritmética \n");
+	scanf("%i", & codigo);
+	
+	if( codigo == 1){
+		
+		printf("Digite o primeiro número: \n");
+		scanf("%f", & x);
+		printf("Digite o segundo número: \n");
+		scanf("%f", & y);	
+		printf("Digite o terceiro número: \n");
+		scanf("%f", & z);		
+	
+		G = x*y*z;
+		
+		printf("O resultado da média Geométrica é : %.2f \n", G);
+		
+	}
+	
+	if( codigo == 2){
+		
+		printf("Digite o primeiro número: \n");
+		scanf("%f", & x);
+		printf("Digite o segundo número: \n");
+		scanf("%f", & y);		
+		printf("Digite o terceiro número: \n");
+		scanf("%f", & z);	
+	
+		P = ((x)+ (2*y)+(3*z))/6;
+		
+		printf("O resultado da média Ponderada é : %.2f \n", P);
+		
+	}
+	
+	if( codigo == 3){
+		
+		printf("Digite o primeiro número: \n");
+		scanf("%f", & x);
+		printf("Digite o segundo número: \n");
+		scanf("%f", & y);		
+		printf("Digite o terceiro número: \n");
+		scanf("%f", & z);		
+	
+		H = 1/((1/x)+(1/y)+(1/z));
+		
+		printf("O resultado da média Harmônica é : %.2f \n", H);
+		
+	}
+	if( codigo == 4){
+		
+		printf("Digite o primeiro número: \n");
+		scanf("%f", & x);
+		printf("Digite o segundo número: \n");
+		scanf("%f", & y);	
+		printf("Digite o terceiro número: \n");
+		scanf("%f", & z);		
+	
+		A = (x+y+z)/3;
+		
+		printf("O resultado da média Aritmética é : %.2f \n", A);
+		
+	}
+	
+	return 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---------------------------------------------------------------------------------------------------------------
 
 12. Leia 2 valores com uma casa decimal (x e y), que devem representar as
 coordenadas de um ponto em um plano. A seguir, determine qual o quadrante
 ao qual pertence o ponto, ou se está sobre um dos eixos cartesianos ou na
 origem (x = y = 0). Se o ponto estiver na origem, escreva a mensagem
 
+13. Faça um programa que informe o mês de acordo com o número digitado pelo usuário.
+Exemplo: Entrada = 4. Saída = Abril.
+#include <iostream>
+#include <stdlib.h>
+#include <locale.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	
+	setlocale(LC_ALL,"Portuguese");
+	
+	int cm;
+	
+	printf("Digite um número: \n");
+	scanf("%i", & cm);
+	
+	
+	if(cm == 1){
+		
+		printf(" Janeiro \n");
+		
+	}
+	
+	if(cm == 2 ){
+		
+		printf(" Fevereiro \n");
+		
+	}
+	if(cm == 3 ){
+		
+		printf(" Março \n");
+		
+	}
+	if(cm == 4 ){
+		
+		printf(" Abril \n");
+		
+	}
+	if(cm == 5){
+		
+		printf(" Maio \n");
+		
+	}
+	if(cm == 6 ){
+		
+		printf(" Junho \n");
+		
+	}
+	if(cm == 7 ){
+		
+		printf(" Julho \n");
+		
+	}
+	if(cm ==8 ){
+		
+		printf(" Agosto\n");
+		
+	}
+	if(cm == 9  ){
+		
+		printf(" Setembro \n");
+		
+	}
+	if(cm == 10 ){
+		
+		printf(" Outubro\n");
+		
+	}
+	if(cm == 11){
+		
+		printf(" Novembro\n");
+		
+	}
+	if(cm == 12 ){
+		
+		printf(" Dezembro \n");
+		
+	}
+		
+	
+	
+	
+	return 0;
+}
+---------------------------------------------------------------------------------------
+14. Reescreva o algoritmo do exercicio 13 utilizando o comando switch.
+
+#include <iostream>
+#include <stdlib.h>
+#include <locale.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	
+	setlocale(LC_ALL,"Portuguese");
+	
+	int cm;
+	
+	printf("Digite um número: \n");
+	scanf("%i", & cm);
+	
+	
+	switch(cm){
+	
+		case 1:
+		
+			printf(" Janeiro \n");
+		
+			break;
+		case 2:
+		
+			printf(" Fevereiro \n");
+			break;
+		case 3:
+		
+			printf(" Março \n");
+			break;
+		case 4: 
+			printf(" Abril \n");
+			break;
+
+		case 5:
+			printf(" Maio \n");
+			break;
+		
+		case 6:
+			printf(" Junho \n");
+			break;
+	
+		case 7:
+		
+			printf(" Julho \n");
+			break;
+
+		case 8:
+			printf(" Agosto\n");
+
+			break;
+		
+		case 9:
+			printf(" Setembro \n");
+			break;
+
+		case 10:
+			printf(" Outubro\n");
+			break;
+		
+		case 11:
+			printf(" Novembro\n");
+			break;
+
+		case 12:
+			printf(" Dezembro \n");
+			break;
+
+	}
+	
+	
+	return 0;
+}
+
+15. Usando o comando switch, escreva um programa que leia um inteiro entre 1 e 7 e
+imprima o dia da semana correspondente a esse número. Isto é, domingo, se 1, segunda-
+feira, se 2, e assim por diante.
+#include<stdio.h>
+int main(){
+	int semana;
+	
+	printf("Digite um valor de 1 a 7 para ver a semana\n");
+	scanf("%i", &semana);
 
 
+	switch(semana)
+    {
+		case 1:
+			printf("Domingo.\n");
+			break;
+		
+		case 2:
+		    printf("Segunda.\n");
+		    break;
+		    
+		case 3:
+		    printf("Terca.\n");
+		    break;
+		case 4:
+		    printf("Quarta.\n");
+		    break;
+	    case 5:
+		    printf("Quinta.\n");
+		    break;
+	    case 6:
+		    printf("Sexta.\n");
+		    break;
+	    case 7:
+		    printf("Sabado.\n");
+		    break;
+		default:
+		   printf("Numero invalido:");   
+		     break; 
+	 
+				
+	}
+	
+	
+}
 
+--------------------------------------------------------------------------------------------------------------------
 
+16. Usando o comando switch, faça um algoritmo que leia o número de DDD e informe a
+qual cidade pertence, considerando só os seguintes valores:
+61 - Brasília
+71 - Salvador
+11 - São Paulo
+21 - Rio de Janeiro
+32 - Juiz de Fora
+19 - Campinas
+27 - Vitória
+31 - Belo Horizonte
+qualquer outro - uma cidade no Brasil sem identificação
 
+#include<stdio.h>
 
+int main(){
+	int ddd;
+printf("digite o ddd para saber a cidade\n");
+scanf("%i",& ddd);
 
-
-
-
-
-
-
-
-
-
-
+switch (ddd){
+	
+	case 61:
+		printf("Brasilia\n");
+	   break;
+		
+	case 71:
+		printf("Salvador \n");
+		break;
+	case 11:
+		printf("Sao Paulo\n");
+		break;
+		
+	case 21:
+		printf("Rio de Janeiro");
+		break;
+		
+   case 32:
+	printf("Juiz de Fora\n");
+	break;
+	
+	case 19:
+		printf("Campinas\n");
+		break;
+		
+		
+	case 27: 
+	printf("Vitoria\n");
+	break;
+	
+	case 31: 
+	printf("Belo Horizonte\n");
+	default:
+		
+	printf("o numero que voce digitou eh invalido\n");
+	
+}	
+}
