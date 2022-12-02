@@ -111,13 +111,68 @@ int main(int argc, char *argv[]) {
 	else {
 		printf("emprestimo nao consedido\n");
 	}
-	
+	-----------------------------------------------------------------
+	5. Faça um programa que leia um número e, caso ele seja positivo, calcule e mostre: o
+número digitado ao quadrado e raiz quadrada do número digitado.
+
+include <stdio.h>
+#include <math.h>
+
+intprincipal(){
+int numero,quadrado,raiz;
+
+printf ("digite o numero: ");
+scanf("%i", &numero);
+
+se(numero<0){
+    printf("O numero apresentado e negativo");
+}
+
+mais{
+    quadrado=numero*numero;
+    raiz=sqrt(numero);
+
+    printf("o quadrado do numero%i e:%i\na raiz quadrada de%i e:%i",numero,quadrado,numero,raiz);
+
+
+}
+
+
+}
 --------------------------------------------------------------------------------------------------------
-//5 Faça um programa que receba a altura e o sexo de uma pessoa e calcule e mostre seu
+//6 Faça um programa que receba a altura e o sexo de uma pessoa e calcule e mostre seu
 peso ideal, utilizando as seguintes fórmulas (em que “h” corresponde à altura):
 ◦ Homens: (72,7 * h) – 58
 ◦ Mulheres: (62,1 * h) – 44,7
+include <stdio.h>
+intprincipal(){
+    altura flutuante, peso;
+    int sexo;
 
+    printf("Digite 1 para masculino e 2 para feminino: ");
+    scanf("%i",&sexo);
+    
+    printf("digite aqui a sua altura: ");
+    scanf("%f",&altura);
+    fflush (stdin);
+
+
+    switch (sexo){
+        
+        Caso1:
+        peso=(72.7*altura)-58;
+
+        printf("\nSeu peso ideal e:%2.fkg",peso);
+        quebrar;
+
+        Caso2:
+        peso=(62.1*altura)-44.7;
+
+        printf("\nSeu peso ideal e:%2.fkg",peso);
+
+    }
+
+}
 
 
 
@@ -468,7 +523,45 @@ int main(int argc, char** argv) {
 12. Leia 2 valores com uma casa decimal (x e y), que devem representar as
 coordenadas de um ponto em um plano. A seguir, determine qual o quadrante
 ao qual pertence o ponto, ou se está sobre um dos eixos cartesianos ou na
-origem (x = y = 0). Se o ponto estiver na origem, escreva a mensagem
+origem (x = y = 0). Se o ponto estiver na origem, escreva a mensagem.
+#include <stdio.h>
+
+intprincipal(){
+
+    int x,y;
+
+    printf("Me informe o valor de X");
+    scanf("%i",&x);
+    printf("Me informe o valor de Y");
+    scanf("%i",&y);
+
+    if(x==0&&y==0){
+        printf("Origem");
+    }  
+    else if(x==0){
+        printf("Eixo X");
+    } 
+    else if(y==0){
+        printf("Eixo Y");
+    }  
+    se(x>0&&y>0) {
+
+        printf("O ponto se encontra no primeiro quadrante");
+    }
+    senão(x<0&&x<0){
+
+        printf("O ponto se encontra no terceiro quadrante");
+
+    }
+    se(x>0&&y<0){
+        printf("O ponto se encontra no quarto quadrante");
+    }
+    se(x<0&&y>0){
+        printf("O ponto se encontra no segundo quadrante");
+    }
+   
+
+}
 
 13. Faça um programa que informe o mês de acordo com o número digitado pelo usuário.
 Exemplo: Entrada = 4. Saída = Abril.
@@ -554,6 +647,7 @@ int main(int argc, char** argv) {
 	
 	return 0;
 }
+
 ---------------------------------------------------------------------------------------
 14. Reescreva o algoritmo do exercicio 13 utilizando o comando switch.
 
@@ -737,6 +831,286 @@ switch (ddd){
 }	
 }
 ----------------------------------------------------------------------------------------------
+17.
+#include <stdio.h>
+intprincipal (){
+    intsoma,sub,div,multi,n1,n2,operacao;
+
+    printf("Qual operacao deseja realizar? \n 1-soma\n 2-subtracao\n 3-divisao\n 4-multiplicacao\n");
+    scanf("%i",&operacao);
+
+    printf("Digite os numeros: ");
+    scanf("%i%i",&n1,&n2);
+
+    switch (operacao){
+
+        Caso1:
+
+        soma = n1+n2;
+        printf("\nresultado: %i",soma);
+        quebrar;
+
+        Caso2:
+
+        sub = n1-n2;
+        printf("\nresultado: %i",sub);
+        quebrar;
+
+        Caso3:
+
+        div = n1/n2;
+        printf("\nresultado: %i",div);
+        quebrar;
+
+        Caso4:
+
+        multi = n1*n2;
+        printf("\nresultado: %i",multi);
+        quebrar;
+    }     
+}
+--------------------------------------------------------------------------------------------
+18.
+#include <stdio.h>
+#include <math.h>'
+intprincipal (){
+    intnumero, operacao2, operacao5;
+
+    printf("digite um numero: ");
+    scanf("%i",&numero);
+
+    operacao2 = numero%2;
+    operacao5 = numero%5;
+
+    if (operacao2 == operacao5){
+
+        printf("Nao e possivel realizar essa conta");
+
+    }
+    else if (operacao2 == 0){
+
+        printf("O numero%ie divisivel por 2",numero);
+    }
+    else if (operacao5 == 0){
+
+        printf("O numero%ie divisivel por 5",numero);
+    }
+    mais{
+
+        printf("Os numeros nao sao divisiveis");
+    } 
+
+}
+------------------------------------------------------------------------------------------
+19.
+#include <stdio.h>
+#include <math.h>
+
+
+intprincipal(){
+
+    intnumero, centavos, posicao1, posicao2, posicao3, posicao4, posicao5, quantidade;
+    
+    printf("Digite o valor: ");
+    scanf("%i",&numero);
+
+    quantidade = log10(numero)+1;
+
+    switch(quantidade){
+
+        Caso1:
+
+        posicao1 = (numero/1)%10;
+        switch (posicao1){
+            Caso0:
+            printf("\n");
+            quebrar;
+            Caso1:
+            printf("precisara de 1 moeda de 1 real\n");
+            quebrar;
+            Caso2:
+            printf("precisara de 1 nota de 2 reais\n");
+            quebrar;
+            Caso3:
+            printf("precisara de 1 nota de 2 reais e 1 moeda de 1 real");
+            quebrar;
+            Caso4:
+            printf("precisara de 2 notas de 2 reais");
+            quebrar;
+            Caso5:
+            printf("Precisara de 1 nota de 5 reais\n");
+            quebrar;
+            Caso6:
+            printf("precisara de 1 nota de 5 reais e 1 moeda de 1 real\n");
+            quebrar;
+            Caso7:
+            printf("precisara de 1 nota de 5 reais e 1 nota de 2 reais\n");
+            quebrar;
+            Caso8:
+            printf("precisara de 1 nota de 5 reais e 1 nota de 2 reais e 1 moeda de 1 real");
+            quebrar;
+            Caso9:
+            printf("precisara de 1 nota de 5 reais e 2 notas de 2 reais\n");
+            quebrar;
+
+        }
+        
+        quebrar;
+        Caso2:
+        posicao1 = (numero/10);
+        posicao2 = (numero/1)%10;
+        
+        switch(posicao1){
+            Caso0:
+            printf("\n");
+            quebrar;
+            Caso1:
+            printf("precisara de 1 nota de 10 reais\n");
+            quebrar;
+            Caso2:
+            printf("precisara de 1 nota de 20 reais\n");
+            quebrar;
+            Caso3:
+            printf("precisara de 1 nota de 20 reais e 1 de 10 reais\n");
+            quebrar;
+            Caso4:
+            printf("precisara de 2 notas de 20 reais\n");
+            quebrar;
+            Caso5:
+            printf("precisara de 1 nota de 50 reais\n");
+            quebrar;
+            Caso6:
+            printf("precisara de 1 nota de 50 reais e 1 de 10 reais\n");
+            quebrar;
+            Caso7:
+            printf("precisara de 1 nota de 50 reais e 1 de 20 reais\n");
+            quebrar;
+            Caso8:
+            printf("precisara de 1 nota de 50 reais e 3 de 10 reais\n");
+            quebrar;
+            Caso9:
+            printf("precisara de 1 nota de 50 reais e 2 de 20 reais\n");
+            quebrar;
+        }
+        switch (posicao2){
+            
+            Caso0:
+            printf("\n");
+            quebrar;
+            Caso1:
+            printf("precisara de 1 moeda de 1 real\n");
+            quebrar;
+            Caso2:
+            printf("precisara de 1 nota de 2 reais\n");
+            quebrar;
+            Caso3:
+            printf("precisara de 1 nota de 2 reais e 1 moeda de 1 real");
+            quebrar;
+            Caso4:
+            printf("precisara de 2 notas de 2 reais");
+            quebrar;
+            Caso5:
+            printf("Precisara de 1 nota de 5 reais\n");
+            quebrar;
+            Caso6:
+            printf("precisara de 1 nota de 5 reais e 1 moeda de 1 real\n");
+            quebrar;
+            Caso7:
+            printf("precisara de 1 nota de 5 reais e 1 nota de 2 reais\n");
+            quebrar;
+            Caso8:
+            printf("precisara de 1 nota de 5 reais e 1 nota de 2 reais e 1 moeda de 1 real");
+            quebrar;
+            Caso9:
+            printf("precisara de 1 nota de 5 reais e 2 notas de 2 reais\n");
+            quebrar;
+        }
+        Caso3:
+         
+         posicao1 = (numero/100);
+         posicao2 = (numero/10)%10;
+         posicao3 = (numero/1)%10;
+        switch (posicao1){
+            Caso1:
+            printf("precisara de 1 nota de 100 reais\n");
+            quebrar;
+            caso2... 9:
+            printf("precisara de %i notas de 100 reais\n",posicao1);
+            quebrar;
+    } 
+
+
+        switch(posicao2){
+            Caso0:
+            printf("\n");
+            quebrar;
+            Caso1:
+            printf("precisara de 1 nota de 10 reais\n");
+            quebrar;
+            Caso2:
+            printf("precisara de 1 nota de 20 reais\n");
+            quebrar;
+            Caso3:
+            printf("precisara de 1 nota de 20 reais e 1 de 10 reais\n");
+            quebrar;
+            Caso4:
+            printf("precisara de 2 notas de 20 reais\n");
+            quebrar;
+            Caso5:
+            printf("precisara de 1 nota de 50 reais\n");
+            quebrar;
+            Caso6:
+            printf("precisara de 1 nota de 50 reais e 1 de 10 reais\n");
+            quebrar;
+            Caso7:
+            printf("precisara de 1 nota de 50 reais e 1 de 20 reais\n");
+            quebrar;
+            Caso8:
+            printf("precisara de 1 nota de 50 reais e 3 de 10 reais\n");
+            quebrar;
+            Caso9:
+            printf("precisara de 1 nota de 50 reais e 2 de 20 reais\n");
+            quebrar;
+        }
+
+        switch (posicao3){
+            
+            Caso0:
+            printf("\n");
+            quebrar;
+            Caso1:
+            printf("precisara de 1 moeda de 1 real\n");
+            quebrar;
+            Caso2:
+            printf("precisara de 1 nota de 2 reais\n");
+            quebrar;
+            Caso3:
+            printf("precisara de 1 nota de 2 reais e 1 moeda de 1 real");
+            quebrar;
+            Caso4:
+            printf("precisara de 2 notas de 2 reais");
+            quebrar;
+            Caso5:
+            printf("Precisara de 1 nota de 5 reais\n");
+            quebrar;
+            Caso6:
+            printf("precisara de 1 nota de 5 reais e 1 moeda de 1 real\n");
+            quebrar;
+            Caso7:
+            printf("precisara de 1 nota de 5 reais e 1 nota de 2 reais\n");
+            quebrar;
+            Caso8:
+            printf("precisara de 1 nota de 5 reais e 1 nota de 2 reais e 1 moeda de 1 real");
+            quebrar;
+            Caso9:
+            printf("precisara de 1 nota de 5 reais e 2 notas de 2 reais\n");
+            quebrar;
+
+        }
+        quebrar;
+}
+}
+----------------------------------------------------------------------------------------------
 20. Leia quatro números (N1, N2, N3, N4), cada um deles com uma casa decimal,
 correspondente às quatro notas de um aluno. Calcule a média com pesos 2, 3, 4 e 1,
 respectivamente, para cada uma destas notas e mostre esta média acompanhada pela
@@ -801,3 +1175,59 @@ int main(int argc, char *argv[]) {
 		return 0;
 }
 ---------------------------------------------------------------------------------
+21. 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <locale.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	setlocale(LC_ALL,"Portuguese");
+	float a,b,c, x1,x2, delta,raizdelta;
+	
+	printf("Digite o coeficiente A : \n");
+	scanf("%f" ,& a );
+	if(a <= 0){
+		
+		printf("Não é uma equação de segundo grau!!! \n");
+		printf("Digite o coeficiente A maior que zero: \n");
+		scanf("%f" ,& a );
+		 
+	}
+	
+	printf("Digite o coeficiente B : \n");
+	scanf("%f", & b );	
+	printf("Digite o coeficiente C : \n");
+	scanf("%f", & c );	
+	
+	delta = (b*b) - 4 * a * c;
+	raizdelta = sqrt(delta);
+	
+	if(delta < 0){
+		
+		printf("Não existe raiz \n");
+		
+	}
+	if(delta == 0){
+		
+		x1 = ((-b) + raizdelta)/ 2 * a;
+		
+		printf("Raiz única !!! A raiz é: %.2f \n", x1);
+		
+		
+	}
+	if(delta > 0){
+		
+		x1 = ((-b) + raizdelta)/ 2 * a;
+		x2 = ((-b) - raizdelta)/ 2 * a;		
+		
+		printf("A primeira raiz é: %.2f \n", x1);
+		printf("A segunda raiz é: %.2f \n", x2);
+
+		
+	}
+	
+	return 0;
+}
